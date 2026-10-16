@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-slate-800 antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-secondary {
+    @apply bg-slate-100 text-slate-700 hover:bg-slate-200;
+  }
+  .field {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200;
+  }
+  .label {
+    @apply flex flex-col gap-1 text-sm font-medium text-slate-700;
+  }
+  .alert-error {
+    @apply rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700;
+  }
+}
