@@ -31,6 +31,10 @@ return [
     'django' => [
         'url' => env('DJANGO_SERVICE_URL', 'http://127.0.0.1:8001'),
         'token' => env('DJANGO_SERVICE_TOKEN'),
+        'endpoints' => [
+            'sync' => '/api/overdue/sync/',
+            'transition' => '/api/tasks/{task}/transition/',
+        ],
     ],
 
     'slack' => [
